@@ -1,6 +1,7 @@
 const defaultConfig = {
   advancedSearch: true,
   memeMode: false,
+  susMode: false,
   textEnabled: true,
   removeBlueVerification: false,
   textOptions: {

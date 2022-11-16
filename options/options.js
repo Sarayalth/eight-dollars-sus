@@ -9,6 +9,7 @@ function onTextEnabledChange() {
 
 function saveOptions() {
   const memeMode = document.getElementById("memeMode").checked;
+  const susMode = document.getElementById("susMode").checked;
   const textEnabled = document.getElementById("textEnabled").checked;
   const textVerifiedLabel = document.getElementById("textVerifiedLabel").value;
   const twitterBlueVerifiedLabel = document.getElementById(
@@ -23,6 +24,7 @@ function saveOptions() {
     {
       advancedSearch,
       memeMode,
+      susMode,
       textEnabled,
       removeBlueVerification,
       textOptions: {
@@ -48,6 +50,7 @@ function restoreOptions() {
     {
       advancedSearch: true,
       memeMode: false,
+      susMode: false,
       textEnabled: true,
       removeBlueVerification: false,
       textOptions: {
@@ -58,6 +61,7 @@ function restoreOptions() {
     },
     function (items) {
       document.getElementById("memeMode").checked = items.memeMode;
+      document.getElementById("susMode").checked = items.susMode;
       document.getElementById("textEnabled").checked = items.textEnabled;
       document.getElementById("textVerifiedLabel").value =
         items.textOptions.verifiedLabel;
